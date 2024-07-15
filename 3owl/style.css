@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Futura PT Book';
+    src: url('./fonts/FuturaPT-Book.eot');
+    src: url('./fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/FuturaPT-Book.woff') format('woff'),
+    url('./fonts/FuturaPT-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+        font-family: 'Futura PT Bold';
+        src: url('./fonts/FuturaPT-Bold.eot');
+        src: url('./fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/FuturaPT-Bold.woff') format('woff'),
+        url('./fonts/FuturaPT-Bold.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    }
+
+    body{
+      font-family: 'Futura PT Book';
+      line-height: 24px;
+    }
+
+    .container{
+        margin: 0 auto;
+        width: 69%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        cursor: pointer;
+    }
+    h3{
+        color: #2D2D2D;
+        font-weight: normal;
+        font-size: 19px;
+        letter-spacing: 4%;
+    }
+    .price{
+        display: flex;
+    }
+    .price__current{
+        color: #D01345;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Futura PT Bold';
+        margin-left:4.94px ;
+    }
+
+    .price__hatch{
+        color: #2D2D2D;
+        font-size: 12px;
+        font-weight: 400;
+        text-decoration:  line-through;
+        opacity: 70%;
+    }
+
+    .item__image {
+      
+       object-fit: contain;
+       
+       
+    }
+
+   h4{
+    font-size: 14px ;
+    opacity: 60%;
+    line-height: 16px;
+    
+    
+   }
+    .size{
+        display: flex;
+    }
+
+    h5{
+        margin: 9px;
+    }
+
+    .item__info
+    {
+        background-color: #fff;
+    }
+    .btn__buy{
+        background-color: #2D2D2D;
+        width: 100px;
+        height: 48px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 8px ;
+   
+    }
+    .hidden__menu {
+        display: flex;
+        gap: 80px;
+        position: absolute;
+        opacity: 0;
+        background-color: #fff;
+        width: fill;
+        
+    }
+    article {
+        transition: all 500ms ease;
+    }
+
+   
+    article:hover .hidden__menu {
+        opacity: 100%;
+        transition: opacity .5s; 
+         z-index: 3;
+    }
+
+    .on{
+        opacity: 100%;
+    }
+    .off{
+        opacity: 40%;
+    }
+   .like{
+    z-index: 2;
+    position: absolute;
+    margin-top: 407px;
+    margin-left:293px ;
+    
+    
+   }
+   .like__red{
+    z-index: 2;
+    position: absolute;
+    margin-top: 407px;
+    margin-left:293px ;
+    
+   }
+
+   .percentage{
+    z-index: 2;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 8px;
+    background-color: #fff;
+    width: 41px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .percentage:before {
+    content: '-25%';
+    color: #D01345;
+    font-family: 'Futura PT Bold';
+    font-size: 12px;
+    
+   }
+  
+   @media all and (max-width: 1600px) {
+    .container{
+    grid-template-columns: repeat(3, 1fr);
+}
+   }
+
+  @media all and (max-width: 1200px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media all and (max-width: 800px){
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
